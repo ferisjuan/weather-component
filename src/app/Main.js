@@ -4,10 +4,11 @@
  */
 import React, {Component} from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
-import {lightBlue600, deepOrange500} from 'material-ui/styles/colors';
+import {lightBlue600, deepOrange500, white} from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Search from './components/Search.jsx'
+import TextString from './components/TextString.jsx'
 
 const styles = {
   container: {
@@ -56,6 +57,16 @@ class Main extends Component {
       <MuiThemeProvider muiTheme={muiTheme}>
         <div style={styles.container}>
           <Search />
+          <TextString
+            iconBefore="icon-location2"
+            styles={{fontSize:20, textAlign: "left"}}
+            text="Sincelejo, Co"
+          />
+          <TextString
+            iconBefore="icon-clock"
+            styles={{fontSize:20, textAlign: "left"}}
+            text="Sincelejo, Co"
+          />
         </div>
       </MuiThemeProvider>
     );

@@ -1,10 +1,10 @@
 {
-  "name": "React Weather Component",
+  "name": "material-ui-example-browserify",
   "version": "0.15.0",
   "description": "Sample project that uses Material-UI",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ferisjuan/weather-component"
+    "url": "https://github.com/callemall/material-ui.git"
   },
   "scripts": {
     "start": "gulp"
