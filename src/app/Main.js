@@ -59,13 +59,13 @@ class Main extends Component {
           <Search />
           <TextString
             iconBefore="icon-location2"
-            styles={{fontSize:20, textAlign: "left"}}
+            styles={{fontSize:22, textAlign: "left"}}
             text="Sincelejo, Co"
           />
           <TextString
             iconBefore="icon-clock"
             styles={{fontSize:20, textAlign: "left"}}
-            text="Sincelejo, Co"
+            text=" 00:00"
           />
         </div>
       </MuiThemeProvider>
