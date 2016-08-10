@@ -10,25 +10,23 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Search from './components/Search.jsx'
 import TextString from './components/TextString.jsx'
 import SetIcon from './components/SetIcon.jsx'
+import InfoPaper from './components/InfoPaper.jsx'
 
 const styles = {
   container: {
     background: deepOrange200,
     fontColor: "white",
     textAlign: 'center',
-    paddingTop: 40,
+    paddingTop: 5,
     paddingLeft: 20,
     paddingRight: 20,
+    paddingBottom: 15,
     margin: "0 auto",
     marginTop: 0,
-    minHeight: 500,
     width: 360,
   },
-  weatherIcon: {
-    fontSize: 50,
-    margin: "0 auto",
-    marginTop: 20,
-    textAlign: 'center'
+  infoStyle: {
+    marginTop:35,
   },
   stringsCity:{
     fontSize:20,
@@ -48,7 +46,13 @@ const styles = {
     margin: "0 auto",
     paddingTop: 20,
     textAlign: "center"
-  }
+  },
+  weatherIcon: {
+    fontSize: 50,
+    margin: "0 auto",
+    marginTop: 20,
+    textAlign: 'center'
+  },
 };
 
 const muiTheme = getMuiTheme({
@@ -109,6 +113,12 @@ class Main extends Component {
             styles={styles.temp}
             text="30"
           />
+          <div style={styles.infoStyle}>
+            <InfoPaper />
+            <InfoPaper />
+            <InfoPaper />
+            <InfoPaper />
+          </div>
         </div>
       </MuiThemeProvider>
     );
