@@ -4,7 +4,7 @@
  */
 import React, {Component} from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
-import {lightBlue600, deepOrange500, white} from 'material-ui/styles/colors';
+import {lightBlue600, deepOrange200, white} from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Search from './components/Search.jsx'
@@ -13,30 +13,47 @@ import SetIcon from './components/SetIcon.jsx'
 
 const styles = {
   container: {
+    background: deepOrange200,
+    fontColor: "white",
     textAlign: 'center',
-    paddingTop: 200,
+    paddingTop: 40,
+    paddingLeft: 20,
+    paddingRight: 20,
     margin: "0 auto",
     marginTop: 0,
     minHeight: 500,
-    width: 480,
-
+    width: 360,
   },
   weatherIcon: {
-    fontSize: 150,
+    fontSize: 50,
     margin: "0 auto",
     marginTop: 20,
     textAlign: 'center'
   },
+  stringsCity:{
+    fontSize:20,
+    textAlign: "left"
+  },
+  stringsTime:{
+    fontSize:18,
+    textAlign: "left"
+  },
   temp: {
-    fontSize: 120,
+    fontSize: 30,
     margin: "0 auto",
+    textAlign: "center"
+  },
+  tempIcon: {
+    fontSize: 30,
+    margin: "0 auto",
+    paddingTop: 20,
     textAlign: "center"
   }
 };
 
 const muiTheme = getMuiTheme({
   palette: {
-    accent1Color: deepOrange500,
+    accent1Color: deepOrange200,
   },
 });
 
@@ -70,21 +87,25 @@ class Main extends Component {
         <div style={styles.container}>
           <Search />
           <TextString
-            iconBefore="icon-location2"
-            styles={{fontSize:22, textAlign: "left"}}
+            iconClasses="icon-location2"
+            position="before"
+            styles={styles.stringsCity}
             text="Sincelejo, Co"
           />
           <TextString
-            iconBefore="icon-clock"
-            styles={{fontSize:20, textAlign: "left"}}
+            iconClasses="icon-clock"
+            position="before"
+            styles={styles.stringsTime}
             text=" 00:00"
           />
           <div>
-            <SetIcon classes="icon-sunrise" styles={styles.weatherIcon}/>
+            <SetIcon
+              iconClasses="icon-sunrise" styles={styles.weatherIcon}/>
           </div>
           <TextString
-            iconAfter="icon-Celsius"
-            iconStyles={styles.weatherIcon}
+            iconClasses="icon-Celsius"
+            iconStyles={styles.tempIcon}
+            position="after"
             styles={styles.temp}
             text="30"
           />

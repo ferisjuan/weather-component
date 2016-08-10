@@ -4,7 +4,7 @@ var SetIcon = React.createClass({
   render(){
 
     return(
-      <i className={this.props.classes} style={this.props.styles}></i>
+      <i className={this.props.iconClasses} style={this.props.styles}></i>
     );
   }
 });
