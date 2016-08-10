@@ -9,6 +9,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Search from './components/Search.jsx'
 import TextString from './components/TextString.jsx'
+import SetIcon from './components/SetIcon.jsx'
 
 const styles = {
   container: {
@@ -20,6 +21,17 @@ const styles = {
     width: 480,
 
   },
+  weatherIcon: {
+    fontSize: 150,
+    margin: "0 auto",
+    marginTop: 20,
+    textAlign: 'center'
+  },
+  temp: {
+    fontSize: 120,
+    margin: "0 auto",
+    textAlign: "center"
+  }
 };
 
 const muiTheme = getMuiTheme({
@@ -66,6 +78,15 @@ class Main extends Component {
             iconBefore="icon-clock"
             styles={{fontSize:20, textAlign: "left"}}
             text=" 00:00"
+          />
+          <div>
+            <SetIcon classes="icon-sunrise" styles={styles.weatherIcon}/>
+          </div>
+          <TextString
+            iconAfter="icon-Celsius"
+            iconStyles={styles.weatherIcon}
+            styles={styles.temp}
+            text="30"
           />
         </div>
       </MuiThemeProvider>
