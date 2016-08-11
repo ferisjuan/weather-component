@@ -11,6 +11,7 @@ import Search from './components/Search.jsx'
 import TextString from './components/TextString.jsx'
 import SetIcon from './components/SetIcon.jsx'
 import InfoPaper from './components/InfoPaper.jsx'
+import PaperChild from './components/PaperChild.jsx'
 
 const styles = {
   container: {
@@ -29,25 +30,30 @@ const styles = {
     marginTop:35,
   },
   stringsCity:{
+    color: "white",
     fontSize:20,
     textAlign: "left"
   },
   stringsTime:{
+    color: "white",
     fontSize:18,
     textAlign: "left"
   },
   temp: {
+    color: "white",
     fontSize: 30,
     margin: "0 auto",
     textAlign: "center"
   },
   tempIcon: {
+    color: "white",
     fontSize: 30,
     margin: "0 auto",
     paddingTop: 20,
     textAlign: "center"
   },
   weatherIcon: {
+    color: "white",
     fontSize: 50,
     margin: "0 auto",
     marginTop: 20,
@@ -114,10 +120,10 @@ class Main extends Component {
             text="30"
           />
           <div style={styles.infoStyle}>
-            <InfoPaper />
-            <InfoPaper />
-            <InfoPaper />
-            <InfoPaper />
+            <InfoPaper children={<PaperChild text="Item 01" />}/>
+            <InfoPaper children={<PaperChild text="Item 02" />}/>
+            <InfoPaper children={<PaperChild text="Item 03" />}/>
+            <InfoPaper children={<PaperChild text="Item 04" />}/>
           </div>
         </div>
       </MuiThemeProvider>
